@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2d5a27;
+            --accent-gold: #c6a21e;
+            --light-green: #f0f4ef;
+            --dark-gold: #8b721b;
+        }
+        
+
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fafaf8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: var(--primary-green);
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: var(--accent-gold);
+            margin: 1rem auto;
+        }
+
+        /* Timeline styles */
+        .timeline {
+            margin: 4rem auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 4rem;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .timeline-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .timeline-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-green);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Team section styles */
+        .team-section {
+            margin: 6rem 0;
+            padding: 3rem 0;
+            background: var(--light-green);
+        }
+
+        .team-section h2 {
+            color: var(--primary-green);
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .team-section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--accent-gold);
+            margin: 1rem auto;
+        }
+
+        .team-quotes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        .team-quote {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .team-quote::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--accent-gold);
+            font-family: Georgia, serif;
+        }
+
+        .quote-content {
+            font-style: italic;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .quote-author {
+            color: var(--primary-green);
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quote-author::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 2px;
+            background: var(--accent-gold);
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Header placeholder -->
+    <header class="header">
+        <div class="container">
+            <!-- <h1>SEVAUTSAV</h1> -->
+            <img id="logo" src="./typeface.svg"></img>
+            <nav class="tab">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-page.html">About</a></li>
+                    <li><a href="events-page.html">Events</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="container">
+            <h1>Our Journey</h1>
+
+            <!-- Timeline Section -->
+            <section class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-image">
+                        <img src="/api/placeholder/600/300" alt="2020 milestone">
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2020 - Our Beginning</h3>
+                        <p>A pivotal moment marked the start of our journey, as we laid the foundation for what would become a transformative initiative. With bold vision and unwavering determination, we set out to redefine excellence in our field.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2021 - Growth Phase</h3>
+                        <p>This year marked unprecedented growth as we expanded our reach and impact. Our team doubled in size, bringing fresh perspectives and diverse talents that enriched our collective expertise.</p>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="/api/placeholder/600/300" alt="2021 milestone">
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-image">
+                        <img src="/api/placeholder/600/300" alt="2022 milestone">
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2022 - Major Achievements</h3>
+                        <p>A year of breakthrough achievements and industry recognition. Our innovative approaches and dedication to excellence earned us multiple accolades and established us as industry leaders.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2023 - Present Day</h3>
+                        <p>Today, we stand at the forefront of innovation, continuing to push boundaries and set new standards. Our commitment to excellence and forward-thinking approach drives us toward even greater achievements.</p>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="/api/placeholder/600/300" alt="2023 milestone">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Team Quotes Section -->
+        <section class="team-section">
+            <div class="container">
+                <h2>Words from Our Team</h2>
+                <div class="team-quotes">
+                    <div class="team-quote">
+                        <p class="quote-content">Our organization's journey has been nothing short of extraordinary. The dedication and innovation I witness daily continue to inspire and drive our mission forward.</p>
+                        <div class="quote-author">John Smith, General Secretary</div>
+                    </div>
+
+                    <div class="team-quote">
+                        <p class="quote-content">The collaborative spirit and unwavering commitment of our team members have been the cornerstone of our success. Together, we're building a legacy of excellence.</p>
+                        <div class="quote-author">Sarah Johnson, Head Coordinator</div>
+                    </div>
+
+                    <div class="team-quote">
+                        <p class="quote-content">Being part of this dynamic team has been an incredible journey. The passion and creativity we bring to every project truly sets us apart in the industry.</p>
+                        <div class="quote-author">Mike Williams, Team Lead</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <p class="footer-info">Contact Us:</p>
+            <div class="footer-links">
+                <a href="#">Help</a>
+                <a href="#">Social Media</a>
+                <a href="#">Other Platforms</a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <form class="footer-form">
+                <label for="feedback">Share your thoughts:</label>
+                <textarea id="feedback" rows="3" placeholder="Your feedback"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>
