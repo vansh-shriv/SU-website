@@ -6,233 +6,15 @@
     <title>SEVA UTSAV - NSS Annual Fest</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        :root {
-            --primary: #1a4f8b;
-            --secondary: #2c7ac9;
-            --accent: #e8f1fa;
-            --text: #333333;
-            --background: #ffffff;
-        }
-
-        body {
-            background-color: var(--background);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: var(--primary);
-            padding: 1rem 2rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding-top: 80px;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-text h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero-text p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-
-        .coming-soon-img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        /* Registration Section */
-        .registration {
-            padding: 4rem 2rem;
-            background-color: var(--accent);
-        }
-
-        .registration-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .registration h2 {
-            color: var(--primary);
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .registration-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .registration-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .registration-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .registration-card ul {
-            list-style: none;
-        }
-
-        .registration-card li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .registration-card li::before {
-            content: "•";
-            color: var(--secondary);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            margin-top: 1rem;
-        }
-
-        .btn:hover {
-            background-color: var(--secondary);
-        }
-
-        /* Countdown Timer */
-        .countdown {
-            display: flex;
-            gap: 2rem;
-            margin: 2rem 0;
-            justify-content: center;
-        }
-
-        .countdown-item {
-            text-align: center;
-            background: rgba(255,255,255,0.1);
-            padding: 1rem;
-            border-radius: 10px;
-            min-width: 100px;
-        }
-
-        .countdown-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-
-        .countdown-label {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .registration-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .countdown {
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
-
-            .countdown-item {
-                min-width: 80px;
-            }
-
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link href="stylehome.css" rel="stylesheet">
+   
 </head>
 <body>
     <nav>
         <div class="nav-content">
             <a href="#" class="logo">SEVA UTSAV</a>
             <div class="nav-links">
-                <a href="#about">About</a>
+                <a href="../about-page.html">About</a>
                 <a href="#registration">Register</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -295,6 +77,74 @@
                         <li>Professional development opportunities</li>
                     </ul>
                     <a href="#" class="btn">View Events</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="events">
+        <div class="events-content">
+            <h2>Upcoming Events</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="date">15</span>
+                        <span class="month">MAR</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Guest Talk on Social Innovation</h3>
+                        <p class="speaker">By Dr. Sarah Johnson</p>
+                        <p class="time"><i class="fas fa-clock"></i> 10:00 AM - 12:00 PM</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Main Auditorium</p>
+                        <a href="#" class="btn-small">Learn More</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="date">16</span>
+                        <span class="month">MAR</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Workshop on Sustainable Development</h3>
+                        <p class="speaker">By Prof. Michael Chen</p>
+                        <p class="time"><i class="fas fa-clock"></i> 2:00 PM - 4:00 PM</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Workshop Hall</p>
+                        <a href="#" class="btn-small">Learn More</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="date">17</span>
+                        <span class="month">MAR</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Community Service Drive</h3>
+                        <p class="speaker">By NSS Volunteers</p>
+                        <p class="time"><i class="fas fa-clock"></i> 9:00 AM - 5:00 PM</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> City Center</p>
+                        <a href="#" class="btn-small">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-media">
+        <div class="social-content">
+            <h2>Stay Connected</h2>
+            <div class="social-grid">
+                <div class="social-card instagram">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Follow Us on Instagram</h3>
+                    <p>Stay updated with latest photos and stories</p>
+                    <a href="#" class="social-btn">@seva_utsav</a>
+                </div>
+                <div class="social-card whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>Join WhatsApp Updates</h3>
+                    <p>Get instant updates and announcements</p>
+                    <a href="#" class="social-btn">Join Group</a>
                 </div>
             </div>
         </div>
