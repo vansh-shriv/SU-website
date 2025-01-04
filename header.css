@@ -1,0 +1,129 @@
+/* Make the header sticky */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(to right, #204e4a, #3d7d6c);
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding-right: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f6d96f;
+}
+
+#logo {
+    padding-left: 2rem;
+    height: 60px;
+}
+
+/*footer*/
+
+.footer {
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #204e4a, #3d7d6c);
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .content{
+    flex: 1;
+} */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 2rem;
+}
+
+.footer-left .footer-info {
+    font-size: 1.1rem;
+}
+
+.footer-left .footer-links a {
+    color: #f6d96f;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-shadow 0.3s;
+}
+
+.footer-left .footer-links a:hover {
+    text-shadow: 0 0 5px #f6d96f;
+}
+
+.footer-right {
+    margin-right: 2rem;
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.footer-form label {
+    font-weight: bold;
+    color: #e5ece3;
+}
+
+.footer-form textarea {
+    width: 90%;
+    max-width: 300px;
+    padding: 0.7rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.footer-form textarea:focus {
+    border-color: #f6d96f;
+    outline: none;
+}
+
+.footer-form button {
+    padding: 0.7rem 2.5rem;
+    background-color: #f6d96f;
+    color: #204e4a;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.footer-form button:hover {
+    background-color: #dcc158;
+    transform: scale(1.05);
+}

@@ -20,45 +20,6 @@ body {
 }
 
 
-/* Make the header sticky */
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: linear-gradient(to right, #204e4a, #3d7d6c);
-    color: #fff;
-    padding: 1rem 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    padding-right: 2rem;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #f6d96f;
-}
-
-#logo {
-    padding-left: 2rem;
-    height: 60px;
-}
 
 /* Content wrapper to allow scrolling */
 .main-content {
