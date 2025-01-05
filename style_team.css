@@ -1,3 +1,20 @@
+:root {
+    --primary-green: #204e4a;
+    --secondary-green: #3d7d6c;
+    --accent-gold: #f6d96f;
+    --dark-gold: #dcc158;
+    --text-dark: #333;
+    --text-light: #666;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,36 +24,109 @@
 
 body {
     background-color: #f5f5f5;
-    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.container {
+/* Fixed header styles */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: linear-gradient(to right, var(--primary-green), var(--secondary-green));
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: var(--shadow-md);
+}
+
+.header .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 60px;
+    padding: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-gold);
+}
+
+/* Main content styles */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
 }
 
 h1 {
+    color: var(--primary-green);
     text-align: center;
-    color: #333;
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
+    margin: var(--spacing-xl) 0;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    position: relative;
 }
 
+h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: var(--accent-gold);
+    margin: var(--spacing-sm) auto;
+    transition: width 0.3s ease;
+}
+
+/* Rest of your existing team page styles */
 .team-section {
-    margin-bottom: 4rem;
+    margin-bottom: var(--spacing-xl);
 }
 
 .section-title {
-    color: #444;
-    margin-bottom: 2rem;
+    color: var(--secondary-green);
+    margin-bottom: var(--spacing-lg);
     text-align: center;
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--accent-gold);
+    margin: var(--spacing-xs) auto;
 }
 
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: var(--spacing-lg);
     justify-items: center;
 }
 
@@ -44,81 +134,181 @@ h1 {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    width: 280px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-card:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .team-card img {
-    width: 280px;
-    height: 280px;
+    width: 100%;
+    height: 320px;
     object-fit: cover;
-    display: block;
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover img {
+    transform: scale(1.05);
 }
 
 .team-info {
-    padding: 1.5rem;
+    padding: var(--spacing-md);
     text-align: center;
 }
 
-.team-info h3 {
-    color: #333;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.team-info .position {
-    color: #666;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-
-.contact-info {
+/* Footer styles */
+.footer {
+    background: linear-gradient(to right, var(--primary-green), var(--secondary-green));
+    color: #fff;
+    padding: var(--spacing-lg) 0;
+    margin-top: auto;
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-    color: #555;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.contact-info a {
-    color: #555;
+.footer-left {
+    margin-left: var(--spacing-lg);
+}
+
+.footer-right {
+    margin-right: var(--spacing-lg);
+}
+
+.footer-info {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-links a {
+    color: var(--accent-gold);
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    margin-right: var(--spacing-sm);
     transition: color 0.3s ease;
 }
 
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.footer-form textarea {
+    padding: var(--spacing-xs);
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    width: 300px;
+}
+
+.footer-form button {
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--accent-gold);
+    color: var(--primary-green);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-form button:hover {
+    background-color: var(--dark-gold);
+}
+/* Center last team card when it's alone in a row */
+.team-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: var(--spacing-lg);
+justify-items: center;
+}
+
+/* Ensure last row is centered */
+.team-grid::after {
+content: "";
+grid-column: 1 / -1;
+}
+
+/* Contact info styling */
+.contact-info {
+display: flex;
+flex-direction: column;
+gap: 8px;
+margin-top: 12px;
+}
+
+.contact-info a {
+display: flex;
+align-items: center;
+gap: 8px;
+text-decoration: none;
+color: #555;
+font-weight: normal;
+transition: color 0.3s ease;
+}
+
 .contact-info a:hover {
-    color: #007bff;
+color: var(--secondary-green);
 }
 
 .contact-info i {
-    font-size: 1rem;
-}
-.Team_leads{
-    display: flex;
-    flex-direction: column;
+width: 16px;
+color: var(--secondary-green);
 }
 
+/* Mobile responsiveness for contact info */
 @media (max-width: 768px) {
+.contact-info {
+align-items: center;
+}
+
+.contact-info a {
+font-size: 0.9rem;
+}
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+    }
+
+    .nav-links {
+        gap: var(--spacing-sm);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #logo {
+        height: 40px;
+    }
+
     .team-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    
-    .team-card {
-        width: 250px;
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--spacing-lg);
     }
-    
-    .team-card img {
-        width: 250px;
-        height: 250px;
+
+    .footer-left, .footer-right {
+        margin: 0;
+        padding: 0 var(--spacing-md);
+    }
+
+    .footer-form {
+        align-items: center;
+    }
+
+    .footer-form textarea {
+        width: 100%;
+        max-width: 300px;
     }
 }
