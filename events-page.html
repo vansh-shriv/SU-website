@@ -6,7 +6,6 @@
     <title>Our Events</title>
     <link href="header.css" rel="stylesheet">
     <style>
-        /* Previous styles remain the same */
         :root {
             --primary-green: #2d5a27;
             --accent-gold: #c6a21e;
@@ -96,68 +95,79 @@
             margin: 0 auto;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
-
         /* Events Grid */
         .events-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-        }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
 
-        .event-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
+.event-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Ensure the content stacks vertically */
+    justify-content: space-between; /* Space between content and button */
 
-        .event-card:hover {
-            transform: translateY(-5px);
-        }
+    height: 100%; /* Ensure consistent height for all cards */
+}
 
-        .event-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+.event-card:hover {
+    transform: translateY(-5px);
+}
 
-        .event-content {
-            padding: 1.5rem;
-        }
+.event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 
-        .event-date {
-            color: var(--accent-gold);
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
+.event-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center text vertically */
+    flex-grow: 1; /* Allow content to grow and push button to the bottom */
+    padding: 1.5rem;
+}
 
-        .event-title {
-            color: var(--primary-green);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
+.event-date {
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
 
-        .event-description {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
+.event-title {
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
 
-        .event-button {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background: var(--primary-green);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: background 0.3s ease;
-        }
+.event-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: auto; /* Push other content up */
+}
 
-        .event-button:hover {
-            background: var(--dark-gold);
-        }
+.event-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary-green);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    align-self: flex-start; /* Align button horizontally */
+    margin-top: auto; /* Push button to the bottom of the card */
+}
+
+.event-button:hover {
+    background: var(--dark-gold);
+}
+
 
         /* Featured tag */
         .featured-tag {

@@ -7,15 +7,11 @@
 }
 
 :root {
-    --primary:  #2d5a27;
+    --primary: #1a4f8b;
     --secondary: #2c7ac9;
     --accent: #e8f1fa;
     --text: #333333;
     --background: #ffffff;
-    --primary-green: #2d5a27;
-            --accent-gold: #c6a21e;
-            --light-green: #f0f4ef;
-            --dark-gold: #8b721b;
 }
 
 body {
