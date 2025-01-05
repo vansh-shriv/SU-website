@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSS Seva Utsav Portal</title>
+    <link rel="stylesheet" href="nss-portal.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">NSS</div>
+                <div>
+                    <h1>NSS Seva Utsav</h1>
+                    <p>Not Me But You</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#lookup">Hours Lookup</a></li>
+            <li><a href="#events">Upcoming Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="announcements">
+            <h3>Important Announcements</h3>
+            <p>📢 Registration for the Annual Blood Donation Camp is now open!</p>
+        </div>
+
+        <section id="lookup">
+            <div class="search-container">
+                <h2>Search Your Participation Records</h2>
+                <form id="searchForm">
+                    <div class="form-group">
+                        <label>Volunteer Name</label>
+                        <input type="text" id="volunteerName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Roll No./Register ID</label>
+                        <input type="text" id="rollNo" required>
+                    </div>
+
+                    <button type="submit">Search Records</button>
+                </form>
+            </div>
+
+            <div class="results" id="results">
+                <h2>Your Participation History</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Program/Event</th>
+                            <th>Date</th>
+                            <th>Hours</th>
+                            <th>Certificate Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recordsTable">
+                    </tbody>
+                </table>
+                <div class="total-hours">
+                    Total Hours Contributed: <span id="totalHours">0</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="events">
+            <div class="upcoming-events">
+                <h2>Upcoming Events</h2>
+                
+                <div class="event-card">
+                    <div class="event-date">January 15-16, 2025</div>
+                    <h3>Blood Donation Camp</h3>
+                    <p>Annual blood donation camp in collaboration with City Hospital. Your small contribution can save lives!</p>
+                    <ul style="margin: 10px 0 10px 20px;">
+                        <li>Location: College Auditorium</li>
+                        <li>Time: 9:00 AM - 4:00 PM</li>
+                        <li>Certificate: Yes</li>
+                        <li>Hours: 4-8 hours</li>
+                    </ul>
+                    <span class="event-status status-open">Registration Open</span>
+                    <a href="#register" class="register-btn">Register Now</a>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">January 20, 2025</div>
+                    <h3>Tree Plantation Drive</h3>
+                    <p>Join us in making our campus greener. Target: 1000 trees in a day!</p>
+                    <ul style="margin: 10px 0 10px 20px;">
+                        <li>Location: College Campus</li>
+                        <li>Time: 8:00 AM - 2:00 PM</li>
+                        <li>Certificate: Yes</li>
+                        <li>Hours: 6 hours</li>
+                    </ul>
+                    <span class="event-status status-open">Registration Open</span>
+                    <a href="#register" class="register-btn">Register Now</a>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">February 1, 2025</div>
+                    <h3>Community Teaching Program</h3>
+                    <p>Teach basic computer skills to underprivileged children from nearby schools.</p>
+                    <ul style="margin: 10px 0 10px 20px;">
+                        <li>Location: Computer Lab</li>
+                        <li>Time: 10:00 AM - 1:00 PM</li>
+                        <li>Certificate: Yes</li>
+                        <li>Hours: 3 hours/session</li>
+                    </ul>
+                    <span class="event-status status-closed">Registration Closed</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="nss-portal.js"></script>
+</body>
+</html>
